@@ -1,39 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moi Girls Kamusinga CMS Panel</title>
-  <!-- Netlify Identity Widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <title>Staff Portal | ACK Moi Girls High School Kamusinga</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
-  <!-- Decap CMS Core -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-  <script>
-    if (window.netlifyIdentity) {
-      // Set the Identity endpoint directly as a normal text string
-      window.netlifyIdentity.setSettings({
-        APIUrl: "https://kamusingagirls.netlify.app/.netlify/identity"
-      });
-
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-
-      // Catch password setup tokens from email invites
-      if (window.location.hash.includes('invite') || window.location.hash.includes('recovery')) {
-        window.netlifyIdentity.on('init', () => {
-          window.netlifyIdentity.open('signup');
-        });
-      }
-    }
-  </script>
+  <!-- Decap CMS Core Script -->
+  <script src="https://unpkg.com/decap-cms@^3.8.3/dist/decap-cms.js"></script>
 </body>
 </html>
 

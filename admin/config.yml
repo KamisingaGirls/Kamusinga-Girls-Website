@@ -1,7 +1,9 @@
 backend:
   name: git-gateway
+  repo: KamisingaGirls/Kamusinga-Girls-Website
   branch: main
-  site_id: kamusingagirls.netlify.app/
+  identity_url: https://auth.decapbridge.com/sites/9e0b02d7-7981-4acc-83e6-0f881f450025
+  gateway_url: https://gateway.decapbridge.com
 
 # Paths are relative to the REPO ROOT (i.e. this site is the root of the repo).
 # If your repo instead has this site inside a subfolder, prefix both lines below
