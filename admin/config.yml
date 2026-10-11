@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+  site_id: kamusingagirls.netlify.app/
 
 # Paths are relative to the REPO ROOT (i.e. this site is the root of the repo).
 # If your repo instead has this site inside a subfolder, prefix both lines below

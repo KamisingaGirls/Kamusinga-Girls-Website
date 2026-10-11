@@ -1,5 +1,52 @@
 <!-- Might use Vercel this time so some of the code here might change -->
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moi Girls Kamusinga CMS Panel</title>
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!-- Decap CMS Core -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    // 1. Point the Identity Widget to your Netlify site URL
+    const NETLIFY_SITE_URL = "https://kamusingagirls.netlify.app/"; // <-- Replace with your real Netlify URL
+
+    if (window.netlifyIdentity) {
+      // Set external Netlify Identity endpoint
+      window.netlifyIdentity.setSettings({
+        APIUrl: `${NETLIFY_SITE_URL}/.netlify/identity`
+      });
+
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+
+      // Automatically open the modal if landing via an email invite/recovery token
+      if (window.location.hash.includes('invite') || window.location.hash.includes('recovery')) {
+        window.netlifyIdentity.on('init', () => {
+          window.netlifyIdentity.open('signup');
+        });
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
@@ -22,7 +69,7 @@
     }
   </script>
 </body>
-</html>
+</html> -->
 
 
 
