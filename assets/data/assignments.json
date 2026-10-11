@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "title": "Composition draft — narrative writing",
+      "date": "2026-09-29",
+      "form": "Form 2",
+      "department": "English, Literature & French",
+      "subject": "English",
+      "assignment_file": ""
+    },
+    {
+      "title": "CAT 3 revision pack — trigonometry & vectors",
+      "date": "2026-10-02",
+      "form": "Form 4",
+      "department": "Mathematics",
+      "subject": "Mathematics",
+      "assignment_file": ""
+    },
+    {
+      "title": "Titration lab report",
+      "date": "2026-10-06",
+      "form": "Form 3",
+      "department": "Sciences",
+      "subject": "Chemistry",
+      "assignment_file": ""
+    },
+    {
+      "title": "Insha — \"Likizo Yangu\" (250 words)",
+      "date": "2026-10-09",
+      "form": "Form 1",
+      "department": "Kiswahili",
+      "subject": "Kiswahili",
+      "assignment_file": ""
+    },
+    {
+      "title": "Business plan outline — Topic 4 revision",
+      "date": "2026-10-13",
+      "form": "Form 4",
+      "department": "Technical Subjects",
+      "subject": "Business Studies",
+      "assignment_file": ""
+    }
+  ]
+}

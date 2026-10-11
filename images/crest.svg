@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="58" fill="#0F2557"/>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#FBFAF8" stroke-width="2"/>
+  <circle cx="60" cy="60" r="49" fill="none" stroke="#6D28D9" stroke-width="1.5"/>
+  <text x="60" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#FBFAF8" text-anchor="middle">MGHS</text>
+  <text x="60" y="74" font-family="Georgia, 'Times New Roman', serif" font-size="9" letter-spacing="1" fill="#C9B8F0" text-anchor="middle">KAMUSINGA</text>
+  <path d="M30 88 L90 88" stroke="#1D4ED8" stroke-width="3"/>
+  <path d="M34 94 L52 94 L52 98 L34 98 Z" fill="#6D28D9"/>
+  <path d="M52 94 L70 94 L70 98 L52 98 Z" fill="#FBFAF8"/>
+  <path d="M70 94 L88 94 L88 98 L70 98 Z" fill="#6D28D9"/>
+</svg>

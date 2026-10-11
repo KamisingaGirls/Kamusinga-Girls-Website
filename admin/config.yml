@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Paths are relative to the REPO ROOT (i.e. this site is the root of the repo).
+# If your repo instead has this site inside a subfolder, prefix both lines below
+# with that folder name, e.g. "my-repo-folder/assets/uploads".
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+collections:
+  - name: "portal_data"
+    label: "School Portal Data"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "assignments"
+        label: "Student Assignments"
+        file: "assets/data/assignments.json"   # One single file for the Assignments page to fetch
+        format: "json"
+        fields:
+          - label: "Assignments List"
+            name: "items"
+            widget: "list"
+            allow_add: true
+            summary: "{{fields.form}} — {{fields.subject}}: {{fields.title}}"
+            fields:
+              - { label: "Assignment Title", name: "title", widget: "string" }
+              - { label: "Date Issued", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - label: "Target Form/Class"
+                name: "form"
+                widget: "select"
+                options: ["Form 3", "Form 4", "Grade 10", "Grade 11", "Grade 12"]
+              - label: "Department"
+                name: "department"
+                widget: "select"
+                options: ["English, Literature & French", "Kiswahili", "Mathematics", "Sciences", "Humanities", "Technical Subjects"]
+              - label: "Subject"
+                name: "subject"
+                widget: "select"
+                options: [
+                  "English", "Literature in English", "French", "Kiswahili", "Fasihi ya Kiswahili",
+                  "Mathematics", "Biology", "Chemistry", "Physics",
+                  "History", "Geography", "CRE",
+                  "Business Studies", "Computer Studies", "Agriculture", "Home Science", "Music & Dance", "Theatre & Film"
+                ]
+              - { label: "Upload Homework File (PDF)", name: "assignment_file", widget: "file", required: false, hint: "Optional — leave blank if there's nothing to download yet." }
+
+      - name: "calendar"
+        label: "School Calendar"
+        file: "assets/data/calendar.json"   # One single file for the Calendar page to fetch
+        format: "json"
+        fields:
+          - label: "Events List"
+            name: "events"
+            widget: "list"
+            allow_add: true
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: "Event Title", name: "title", widget: "string" }
+              - { label: "Event Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Category", name: "category", widget: "select", options: ["Academic", "Sports", "Event", "Welfare", "Holiday"] }
+              - { label: "Time/Duration", name: "time", widget: "string", hint: "e.g., 09:00 AM — 04:00 PM, or \"All day\"" }
+              - { label: "Event Details", name: "body", widget: "text" }

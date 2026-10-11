@@ -1,0 +1,46 @@
+/* Shared look-and-feel for every page */
+html { scroll-behavior: smooth; }
+body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #0F172A; background: #fff; }
+h1, h2, h3, h4 { text-wrap: balance; }
+[id] { scroll-margin-top: 104px; }
+
+.glass-header { background: rgba(255,255,255,.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+
+/* Hero backgrounds */
+.hero-gradient { background: linear-gradient(135deg, #0A1538 0%, #12318f 58%, #5b2bc9 100%); }
+.hero-gradient::before {          /* soft light bloom */
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(60% 80% at 85% 10%, rgba(124,58,237,.35), transparent 60%),
+              radial-gradient(50% 70% at 0% 100%, rgba(29,78,216,.45), transparent 60%);
+}
+.hero-grid::after {               /* faint grid texture, fading to the edges */
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    radial-gradient(70% 70% at 50% 40%, transparent 0%, transparent 45%, rgba(10,21,56,.55) 75%, #0A1538 100%),
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 100% 100%, 56px 56px, 56px 56px;
+}
+.purple-gradient-card { background: linear-gradient(135deg, #0A1538 0%, #1E1B4B 50%, #4C1D95 100%); }
+
+.badge-blue   { background: rgba(29,78,216,.10);  color: #1D4ED8; }
+.badge-purple { background: rgba(124,58,237,.10); color: #7C3AED; border: 1px solid rgba(124,58,237,.22); }
+
+/* Photos: consistent framing for every image slot */
+.photo { position: relative; overflow: hidden; background: #E2E8F0; }
+.photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Hero slider */
+.hero-slide.active { animation: slideIn .7s ease both; }
+@keyframes slideIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* Scroll reveal — only hides things when JS is running, so no-JS visitors still see everything */
+.js-reveal .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.js-reveal .reveal.in { opacity: 1; transform: none; }
+
+:focus-visible { outline: 3px solid #7C3AED; outline-offset: 3px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-slide.active, .js-reveal .reveal { animation: none; transition: none; opacity: 1; transform: none; }
+}

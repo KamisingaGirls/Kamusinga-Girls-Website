@@ -1,0 +1,116 @@
+HOW TO CONNECT THE ALUMNI REGISTRATION FORM TO A GOOGLE SHEET
+================================================================
+
+This makes the "Register in the official directory" form on the Alumni
+page actually save what people type in — to a Google Sheet you own,
+for free, with no monthly cost and no third-party company involved.
+
+Do this once. It takes about 10 minutes.
+
+
+STEP 1 — Create the Sheet
+--------------------------
+1. Go to sheets.google.com and create a new, blank spreadsheet.
+2. Name it something like "Alumni Registrations".
+3. Rename the bottom tab (currently "Sheet1") to: Registrations
+   (You don't need to add column headers yourself — the script in
+   Step 2 adds them automatically the first time someone registers.)
+
+
+STEP 2 — Add the script that receives form submissions
+--------------------------------------------------------
+1. In that same spreadsheet, click Extensions > Apps Script.
+2. Delete any code already in the editor, and paste in exactly this:
+
+----------------------------------------------------------------------
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Registrations');
+  var data = JSON.parse(e.postData.contents);
+
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow([
+      'Timestamp', 'Full Name', 'Completion Year', 'Email', 'Phone',
+      'M-Pesa Code', 'City / Town', 'Occupation', 'Message', 'Status'
+    ]);
+  }
+
+  sheet.appendRow([
+    new Date(),
+    data.name || '',
+    data.year || '',
+    data.email || '',
+    data.phone || '',
+    data.mpesaCode || '',
+    data.city || '',
+    data.occupation || '',
+    data.message || '',
+    'Pending verification'
+  ]);
+
+  return ContentService.createTextOutput(JSON.stringify({ result: 'success' }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+----------------------------------------------------------------------
+
+3. Click the Save icon (disk icon), name the project "Alumni Form Handler".
+
+
+STEP 3 — Publish it as a web address the form can send data to
+------------------------------------------------------------------
+1. Click the blue "Deploy" button (top right) > "New deployment".
+2. Click the gear/cog icon next to "Select type" and choose "Web app".
+3. Fill in:
+     Description:        Alumni registration handler
+     Execute as:          Me (your Google account)
+     Who has access:      Anyone
+   ("Anyone" sounds alarming, but it only means the form on your website
+   is allowed to submit data to it — nobody can read your Sheet through
+   this link, only add a new row to it.)
+4. Click Deploy.
+5. The first time, Google will ask you to authorize the script —
+   click through "Advanced" > "Go to Alumni Form Handler (unsafe)" if
+   it shows that warning. This is expected for a script you wrote
+   yourself; it's just Google being cautious about scripts in general.
+6. You'll be given a "Web app URL" that looks like:
+     https://script.google.com/macros/s/AKfycb.../exec
+   Copy that entire URL.
+
+
+STEP 4 — Tell the website about it
+-------------------------------------
+1. Open assets/alumni-config.js in the website files.
+2. Replace PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE with the URL
+   you just copied (keep the quote marks around it).
+3. While you're there, also replace PASTE YOUR PAYBILL OR TILL NUMBER
+   HERE with the actual Paybill or Till number alumni should pay the
+   Ksh 200 to for now.
+4. Save the file and re-upload the site.
+
+
+STEP 5 — Test it
+-------------------
+1. Open the live Alumni page and submit the form yourself with test
+   details.
+2. Open your Google Sheet — a new row should appear within a few
+   seconds, with "Pending verification" in the last column.
+3. If nothing appears: double-check the URL was pasted in full and
+   that "Who has access" was set to "Anyone" in Step 3.
+
+
+DAY-TO-DAY: VERIFYING A PAYMENT
+----------------------------------
+When someone registers, their row lands with Status = "Pending
+verification" and their M-Pesa code sitting right there in the sheet.
+A staff member checks that code against the Paybill/Till statement,
+and simply types "Verified" over "Pending verification" in that cell
+once confirmed. That's the entire admin workflow — no extra software.
+
+
+LATER: SWITCHING TO A DEDICATED PAYBILL OR AUTOMATIC PAYMENT
+------------------------------------------------------------------
+When the school's own dedicated Alumni Paybill/Till is ready, update
+the two lines in assets/alumni-config.js and nothing else needs to
+change. If later you want payment to be fully automatic (a real M-Pesa
+STK push instead of "pay first, then tell us the code"), that's a
+separate, bigger integration — ask Claude to build it once you have a
+live Paybill number from Safaricom.

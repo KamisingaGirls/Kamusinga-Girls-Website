@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alumni Network - ACK Moi Girls High School Kamusinga</title>
+<meta name="description" content="Join the ACK Moi Girls High School Kamusinga alumni network — connecting old girls, funding legacy projects like our water tank, and mentoring the next generation.">
+<meta name="keywords" content="Moi Girls Kamusinga Alumni, Kamusinga Old Girls, ACK Moi Girls Kamusinga network, Kimilili school alumni, girls schools in western Kenya, girls schools in Bungoma county">
+<link rel="canonical" href="https://www.moigirlskamusinga.net/alumni.html">
+
+<!-- Social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ACK Moi Girls High School Kamusinga">
+<meta property="og:title" content="Alumni Network — ACK Moi Girls High School Kamusinga">
+<meta property="og:description" content="Join the ACK Moi Girls High School Kamusinga alumni network — connecting old girls, funding legacy projects like our water tank, and mentoring the next generation.">
+<meta property="og:image" content="https://www.moigirlskamusinga.net/images/photos/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A1538">
+<link rel="icon" href="images/crest.svg" type="image/svg+xml">
+
+<!-- Fonts & icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+
+<!-- Tailwind: precompiled static stylesheet (colours & fonts still set in assets/site-config.js,
+     which is now only a reference doc + the source the build reads from) -->
+<link rel="stylesheet" href="assets/tailwind.css">
+<script src="assets/alumni-config.js"></script>
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+
+</head>
+<body class="antialiased text-slate-800 flex flex-col min-h-screen">
+
+<!-- Top Utility Bar -->
+<div class="bg-brand-navyDark text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800/80">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+    <div class="flex items-center space-x-6">
+      <a href="mailto:moigirlskamusinga@gmail.com" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-regular fa-envelope text-brand-purple"></i>moigirlskamusinga@gmail.com</a>
+      <a href="tel:+254737373679" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-phone text-brand-purple"></i>0737 373 679</a>
+    </div>
+    <div class="flex items-center gap-2 text-slate-300"><i class="fa-solid fa-location-dot text-brand-purple"></i><span>PO Box 282–50204, Kimilili, Bungoma County, Kenya</span></div>
+  </div>
+</div>
+
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <img src="images/crest.svg" alt="ACK Moi Girls High School Kamusinga crest" width="48" height="48" class="w-12 h-12 object-contain">
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg md:text-xl text-brand-navyDark tracking-tight group-hover:text-brand-blue transition-colors">ACK Moi Girls Kamusinga</span>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-brand-purple">C1 3 Pathway Boarding School</span>
+        </div>
+      </a>
+      <nav class="hidden lg:flex items-center space-x-1" aria-label="Primary Navigation">
+        <a href="index.html" class="px-4 py-2 rounded-full text-sm font-semibold text-slate-700 hover:text-brand-blue hover:bg-slate-50 transition-colors">Home</a><a href="academics.html" class="px-4 py-2 rounded-full text-sm font-semibold text-slate-700 hover:text-brand-blue hover:bg-slate-50 transition-colors">Academics</a><a href="alumni.html" aria-current="page" class="px-4 py-2 rounded-full text-sm font-semibold text-brand-blue bg-blue-50">Alumni</a><a href="assignments.html" class="px-4 py-2 rounded-full text-sm font-semibold text-slate-700 hover:text-brand-blue hover:bg-slate-50 transition-colors">Assignments</a><a href="calendar.html" class="px-4 py-2 rounded-full text-sm font-semibold text-slate-700 hover:text-brand-blue hover:bg-slate-50 transition-colors">Calendar</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <a href="alumni.html#register" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-brand-purple hover:bg-brand-purpleHover transition-all shadow-md shadow-purple-500/25">
+          <i class="fa-solid fa-users-line mr-2 text-xs"></i>Join Alumni Network
+        </a>
+        <button id="nav-toggle" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i id="nav-icon" class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 shadow-xl">
+    <a href="index.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Home</a><a href="academics.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Academics</a><a href="alumni.html" aria-current="page" class="block px-4 py-3 rounded-xl text-base font-semibold text-brand-blue bg-blue-50">Alumni</a><a href="assignments.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Assignments</a><a href="calendar.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Calendar</a>
+    <div class="pt-2"><a href="alumni.html#register" class="block w-full text-center py-3 rounded-full font-bold text-white bg-brand-purple hover:bg-brand-purpleHover shadow">Join Alumni Network</a></div>
+  </div>
+</header>
+
+<main class="flex-grow">
+
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-brand-lightBg py-16 lg:py-24 border-b border-slate-200/80 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6">
+          <nav class="flex items-center text-xs font-semibold uppercase tracking-wider text-slate-500 gap-2">
+            <a href="index.html" class="hover:text-brand-purple transition-colors">Home</a>
+            <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+            <span class="text-brand-purple font-bold">Alumni Network</span>
+          </nav>
+
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-purple text-xs font-bold tracking-wider uppercase">
+            <span class="w-2 h-2 rounded-full bg-brand-purple animate-ping"></span>
+            ACK Moi Girls Kamusinga Alumni Network
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-navyDark leading-[1.15]">
+            Once a Kamusinga girl, <br><span class="text-brand-purple">always a Kamusinga girl.</span>
+          </h1>
+
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+            Our alumni network stays close to the school long after graduation, giving back time, resources, leadership, and mentorship to the young women following in their footsteps across Kenya and globally.
+          </p>
+
+          <div class="pt-2 flex flex-wrap gap-4 items-center">
+            <a href="#register" class="px-8 py-3.5 rounded-full text-base font-bold bg-brand-purple text-white hover:bg-brand-purpleHover transition-all shadow-lg shadow-purple-500/25 flex items-center gap-2">
+              Join Official Directory
+              <i class="fa-solid fa-arrow-down text-xs"></i>
+            </a>
+            <a href="#water-tank" class="px-8 py-3.5 rounded-full text-base font-bold text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 transition-all shadow-sm">
+              View Legacy Projects
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Image Frame -->
+        <div class="lg:col-span-5">
+          <div class="photo rounded-3xl overflow-hidden shadow-corporate bg-white">
+            <img src="images/photos/alumni1.jpg" alt="Empowered Professional Women Alumni" width="1600" height="1200" loading="eager" decoding="async" fetchpriority="high" class="w-full h-[450px] object-cover object-top hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <span class="text-xs font-bold uppercase tracking-wider text-purple-300 bg-brand-navyDark/60 px-3 py-1 rounded-full backdrop-blur-md">Global Sisterhood</span>
+              <p class="text-base font-bold mt-2">Empowering 10,000+ graduates since 1973</p>
+              <p class="text-xs text-slate-300">Leading in medicine, engineering, education, corporate leadership & enterprise.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVE NETWORK IMPACT SECTION -->
+  <section class="reveal py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-brand-blue text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-award"></i> Active Leadership
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-brand-navyDark tracking-tight">
+          An active network, not just a name on paper
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed">
+          The network is run by an elected alumni president who coordinates fundraising, reunions, and mentorship for old girls across the country. Under her leadership, the association delivers real, completed projects — not just empty promises.
+        </p>
+      </div>
+
+      <!-- Impact Milestone Cards Grid -->
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="bg-brand-lightBg p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-corporate transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-purple flex items-center justify-center text-xl mb-6 font-bold">
+              <i class="fa-solid fa-faucet-drip"></i>
+            </div>
+            <h3 class="text-xl font-bold font-display text-brand-navyDark mb-2">Water Infrastructure</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">Funded and delivered a modern water storage reservoir serving over 1,000 boarding girls daily.</p>
+          </div>
+          <div class="inline-flex items-center text-xs font-bold text-brand-purple bg-purple-50 px-3 py-1.5 rounded-full w-fit">
+            <i class="fa-solid fa-check-circle mr-1.5"></i> Completed Project
+          </div>
+        </div>
+
+        <div class="bg-brand-lightBg p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-corporate transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center text-xl mb-6 font-bold">
+              <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <h3 class="text-xl font-bold font-display text-brand-navyDark mb-2">Student Mentorship</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">Quarterly career guidance sessions pairing Form 4 candidates with industry leaders.</p>
+          </div>
+          <div class="inline-flex items-center text-xs font-bold text-brand-blue bg-blue-50 px-3 py-1.5 rounded-full w-fit">
+            <i class="fa-solid fa-arrows-spin mr-1.5 animate-spin"></i> Ongoing Initiative
+          </div>
+        </div>
+
+        <div class="bg-brand-lightBg p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-corporate transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-xl mb-6 font-bold">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <h3 class="text-xl font-bold font-display text-brand-navyDark mb-2">Library & Lab Support</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">Donation of modern revision materials, digital laptops, and STEM laboratory apparatus.</p>
+          </div>
+          <div class="inline-flex items-center text-xs font-bold text-indigo-700 bg-indigo-50 px-3 py-1.5 rounded-full w-fit">
+            <i class="fa-solid fa-star mr-1.5"></i> Annual Legacy Drive
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURED GIVING PROJECT SECTION -->
+  <section id="water-tank" class="reveal py-20 purple-gradient-card text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-400/30 text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-droplet text-blue-400"></i> Featured Legacy Project
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-white leading-tight">
+            Giving Back: The Alumni Water Tank Initiative
+          </h2>
+
+          <p class="text-slate-300 text-base leading-relaxed">
+            One of the network's standout recent projects was fully funding and installing a modern high-capacity water tank for the school — a practical gift that keeps clean water flowing for hundreds of boarders every single day.
+          </p>
+
+          <p class="text-slate-300 text-base leading-relaxed">
+            It embodies the spirit of our association: zero idle talk, direct action, and tangible improvements that enhance daily student life.
+          </p>
+
+          <!-- Key Project Stats Bar -->
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/10">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-purple-300 font-display">Ksh 500K+</div>
+              <div class="text-[11px] font-semibold text-slate-300 uppercase tracking-wider mt-1">Funds Raised</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-white font-display">1,000+</div>
+              <div class="text-[11px] font-semibold text-slate-300 uppercase tracking-wider mt-1">Girls Impacted</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-purple-300 font-display">100%</div>
+              <div class="text-[11px] font-semibold text-slate-300 uppercase tracking-wider mt-1">Alumni Funded</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Card -->
+        <div class="lg:col-span-6">
+          <div class="photo rounded-3xl overflow-hidden shadow-2xl group">
+            <img src="images/photos/water.jpg" alt="School campus infrastructure water tank" width="1600" height="1000" loading="lazy" decoding="async" class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark/90 via-black/20 to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+              <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 max-w-md">
+                <div class="flex items-center gap-2 text-purple-300 text-xs font-bold uppercase tracking-wider mb-1">
+                  <i class="fa-solid fa-circle-check text-purple-300"></i> Commissioned & Active
+                </div>
+                <p class="text-xs text-slate-200">Continuous reliable water supply delivered directly to dormitories and dining hall.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE BENEFITS GRID -->
+  <section class="reveal py-20 bg-brand-lightBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-brand-purple text-xs font-bold uppercase tracking-wider">
+          Membership Advantages
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-brand-navyDark tracking-tight">
+          Why join the alumni network?
+        </h2>
+        <p class="text-slate-600 text-base">
+          Registering carries a nominal one-off fee, keeping you genuinely connected to the school and sisters you shared your teenage years with.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Benefit Card 1 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-corporate hover:shadow-corporate-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-purple-50 text-brand-purple flex items-center justify-center font-bold text-lg mb-6">
+              01
+            </div>
+            <h3 class="text-lg font-bold font-display text-brand-navyDark mb-3">Reconnect with Classmates</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Find and reconnect with the girls you boarded with, wherever in the world they are today.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-brand-purple">
+            Class Directories & Directory <i class="fa-solid fa-arrow-right ml-1"></i>
+          </div>
+        </div>
+
+        <!-- Benefit Card 2 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-corporate hover:shadow-corporate-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-purple-50 text-brand-purple flex items-center justify-center font-bold text-lg mb-6">
+              02
+            </div>
+            <h3 class="text-lg font-bold font-display text-brand-navyDark mb-3">Mentor Next Generation</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Share advice, career guidance, and practical empowerment with current students who look up to you.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-brand-purple">
+            Structured Mentorship <i class="fa-solid fa-arrow-right ml-1"></i>
+          </div>
+        </div>
+
+        <!-- Benefit Card 3 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-corporate hover:shadow-corporate-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-purple-50 text-brand-purple flex items-center justify-center font-bold text-lg mb-6">
+              03
+            </div>
+            <h3 class="text-lg font-bold font-display text-brand-navyDark mb-3">Shape Legacy Projects</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Have a voting voice in what developmental projects the association undertakes next for the school.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-brand-purple">
+            Project Voting Rights <i class="fa-solid fa-arrow-right ml-1"></i>
+          </div>
+        </div>
+
+        <!-- Benefit Card 4 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-corporate hover:shadow-corporate-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-purple-50 text-brand-purple flex items-center justify-center font-bold text-lg mb-6">
+              04
+            </div>
+            <h3 class="text-lg font-bold font-display text-brand-navyDark mb-3">VIP Homecoming Access</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Receive priority invitations to reunions, Annual Alumni Homecoming Day, and exclusive events.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-brand-purple">
+            Exclusive Invites <i class="fa-solid fa-arrow-right ml-1"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION FORM SECTION -->
+  <section id="register" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-brand-purple text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-address-card"></i> Alumni Directory
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-brand-navyDark tracking-tight">
+          Register in the official directory
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Two quick steps to join — pay the one-off fee, then tell us about you. Your listing goes live once a staff member verifies your payment.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-6 lg:gap-8 items-start">
+
+        <!-- STEP 1 — PAYMENT -->
+        <div class="lg:col-span-2 lg:sticky lg:top-28">
+          <div class="bg-white border border-slate-200 rounded-3xl p-7 sm:p-8 shadow-corporate h-full">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-9 h-9 rounded-full bg-brand-blue text-white flex items-center justify-center font-display font-bold text-sm flex-shrink-0">1</div>
+              <h3 class="font-display font-bold text-lg text-brand-navyDark">Pay the registration fee</h3>
+            </div>
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              Go to M-Pesa &gt; Lipa na M-Pesa &gt; Pay Bill and send <strong class="text-brand-navyDark">Ksh 200</strong> using the details below. Keep the confirmation SMS, you will need the code for Step 2.
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center justify-between gap-4 bg-brand-lightBg rounded-xl border border-slate-200 px-4 py-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Paybill / Till No.</span>
+                <span id="pay-number" class="font-bold text-brand-navyDark font-mono text-sm">—</span>
+              </div>
+              <div class="flex items-center justify-between gap-4 bg-brand-lightBg rounded-xl border border-slate-200 px-4 py-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Account / Reference</span>
+                <span id="pay-account" class="font-bold text-brand-navyDark font-mono text-sm">—</span>
+              </div>
+              <div class="flex items-center justify-between gap-4 bg-purple-50 rounded-xl border border-purple-200 px-4 py-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-purple">Amount</span>
+                <span class="font-bold text-brand-purple font-mono text-sm">Ksh 200</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2.5 text-xs text-slate-500 leading-relaxed">
+              <i class="fa-solid fa-circle-info text-brand-blue mt-0.5"></i>
+              <span>A school office staff member checks every M-Pesa code against the statement. STK push coming soon</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 — FORM -->
+        <div class="lg:col-span-3">
+          <div class="bg-white border border-slate-200 rounded-3xl p-7 sm:p-10 shadow-corporate">
+            <div class="flex items-center gap-3 mb-7">
+              <div class="w-9 h-9 rounded-full bg-brand-purple text-white flex items-center justify-center font-display font-bold text-sm flex-shrink-0">2</div>
+              <h3 class="font-display font-bold text-lg text-brand-navyDark">Tell us about you</h3>
+            </div>
+
+            <form id="alumni-form" class="space-y-5">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="a-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Full Name <span class="text-red-500">*</span>
+                  </label>
+                  <div class="relative">
+                    <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input id="a-name" name="name" type="text" placeholder="e.g. Grace Naliaka" required class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-purple focus:border-brand-purple text-sm transition-all outline-none">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="a-year" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Completion Year <span class="text-red-500">*</span>
+                  </label>
+                  <div class="relative">
+                    <i class="fa-solid fa-graduation-cap absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input id="a-year" name="year" type="number" min="1976" max="2026" placeholder="e.g. 2012" required class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-purple focus:border-brand-purple text-sm transition-all outline-none">
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="a-email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Email Address <span class="text-red-500">*</span>
+                  </label>
+                  <div class="relative">
+                    <i class="fa-regular fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input id="a-email" name="email" type="email" placeholder="grace@example.com" required class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-purple focus:border-brand-purple text-sm transition-all outline-none">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="a-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Phone Number <span class="text-red-500">*</span>
+                  </label>
+                  <div class="relative">
+                    <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input id="a-phone" name="phone" type="tel" placeholder="07XX XXX XXX" required class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-purple focus:border-brand-purple text-sm transition-all outline-none">
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label for="a-mpesa-code" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  M-Pesa Confirmation Code <span class="text-red-500">*</span>
+                </label>
+                <div class="relative">
+                  <i class="fa-solid fa-receipt absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                  <input id="a-mpesa-code" name="mpesaCode" type="text" placeholder="e.g. QGH7XXXXXX" required class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-purple focus:border-brand-purple text-sm transition-all outline-none font-mono uppercase">
+                </div>
+                <p class="text-xs text-slate-500 mt-1.5">From the SMS M-Pesa sends after you complete Step 1.</p>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="a-city" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    City / Town You're Based In <span class="text-red-500">*</span>
+                  </label>
+                  <div class="relative">
+                    <i class="fa-solid fa-location-dot absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input id="a-city" name="city" type="text" placeholder="e.g. Nairobi, Kenya" required class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-purple focus:border-brand-purple text-sm transition-all outline-none">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="a-occupation" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Current Occupation <span class="text-slate-400 normal-case font-medium">(optional)</span>
+                  </label>
+                  <div class="relative">
+                    <i class="fa-solid fa-briefcase absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input id="a-occupation" name="occupation" type="text" placeholder="e.g. Senior Software Engineer / Entrepreneur" class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-purple focus:border-brand-purple text-sm transition-all outline-none">
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label for="a-message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Message / Notes for Alumni Committee <span class="text-slate-400 normal-case font-medium">(optional)</span>
+                </label>
+                <textarea id="a-message" name="message" rows="3" placeholder="Share memories, project ideas, or mentorship availability..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-purple focus:border-brand-purple text-sm transition-all outline-none"></textarea>
+              </div>
+
+              <div class="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-4">
+                <button type="submit" id="alumni-submit-btn" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-bold text-white bg-brand-purple hover:bg-brand-purpleHover transition-all shadow-lg shadow-purple-500/25 flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  Submit Registration
+                </button>
+                <span class="text-xs text-slate-500 text-center sm:text-left flex items-center gap-1.5">
+                  <i class="fa-solid fa-bolt text-brand-purple"></i>
+                  Instant M-Pesa checkout (STK Push) is coming soon. For now your payment is verified manually.
+                </span>
+              </div>
+            </form>
+
+            <!-- Real Submission Status Box -->
+            <div id="payment-status-container" class="hidden mt-8 p-6 rounded-2xl bg-white border border-slate-200 text-center space-y-4">
+              <div id="payment-spinner" class="inline-block animate-spin rounded-full h-10 w-10 border-4 border-brand-purple border-t-transparent"></div>
+              <div id="payment-status-text" class="text-sm font-semibold text-brand-navyDark">
+                Submitting your registration...
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contact-info" class="bg-brand-navyDark text-slate-300 text-sm border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+      <div class="lg:col-span-2 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-white p-1 flex items-center justify-center"><img src="images/crest.svg" alt="" width="36" height="36" class="max-h-full max-w-full"></div>
+          <span class="font-display font-bold text-lg text-white">Moi Girls Kamusinga</span>
+        </div>
+        <p class="text-slate-400 text-xs leading-relaxed max-w-sm">A national ACK girls' boarding school in Kimilili, Bungoma County, educating confident, capable young women since 1973. Motto: <em>Self Drive for Excellence</em>.</p>
+      </div>
+      <div>
+        <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Explore</h5>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="academics.html" class="hover:text-white transition-colors">Academics</a></li>
+          <li><a href="alumni.html" class="hover:text-white transition-colors">Alumni Network</a></li>
+          <li><a href="assignments.html" class="hover:text-white transition-colors">Assignments Portal</a></li>
+          <li><a href="calendar.html" class="hover:text-white transition-colors">School Calendar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Departments</h5>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="academics.html#sciences" class="hover:text-white transition-colors">Mathematics &amp; Sciences</a></li>
+          <li><a href="academics.html#humanities" class="hover:text-white transition-colors">Humanities &amp; Languages</a></li>
+          <li><a href="academics.html#technical" class="hover:text-white transition-colors">Technical Subjects</a></li>
+          <li><a href="academics.html#careers" class="hover:text-white transition-colors">Guidance &amp; Counseling</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Get in touch</h5>
+        <div class="space-y-2.5 text-xs text-slate-400">
+          <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-brand-purple mt-0.5"></i><span>PO Box 282-50204, Kimilili<br>2km off Chwele-Kimilili-Bungoma Rd</span></p>
+          <p class="flex items-center gap-2"><i class="fa-regular fa-envelope text-brand-purple"></i><a href="mailto:moigirlskamusinga@gmail.com" class="hover:text-white transition-colors">moigirlskamusinga@gmail.com</a></p>
+          <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-purple"></i><a href="tel:+254737373679" class="hover:text-white transition-colors">0737 373 679</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3">
+      <div class="flex items-center gap-4">
+        <span>© <span class="js-year">2026</span> ACK Moi Girls High School Kamusinga. All rights reserved.</span>
+        <a href="admin/index.html" class="text-brand-purple/80 hover:text-brand-purple font-semibold transition-colors flex items-center gap-1.5"><i class="fa-solid fa-key text-[10px]"></i>Staff Portal Login</a>
+      </div>
+      <div class="text-slate-400 font-medium">Designed and developed by Shalleen H for Moi Girls Kamusinga</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const cfg = window.ALUMNI_CONFIG || {};
+    const notConfigured = (v) => !v || /PASTE/i.test(v);
+
+    // Show the real Paybill/Till + account reference from assets/alumni-config.js
+    const payNumberEl = document.getElementById('pay-number');
+    const payAccountEl = document.getElementById('pay-account');
+    if (payNumberEl) payNumberEl.textContent = notConfigured(cfg.PAYBILL_NUMBER) ? 'Ask the school office' : cfg.PAYBILL_NUMBER;
+    if (payAccountEl) payAccountEl.textContent = cfg.ACCOUNT_REFERENCE || 'ALUMNI-200';
+
+    // Real registration submission — saves to the Google Sheet configured in
+    // assets/alumni-config.js (see GOOGLE_SHEETS_SETUP.txt for how to set that up).
+    const alumniForm = document.getElementById('alumni-form');
+    const statusContainer = document.getElementById('payment-status-container');
+    const statusText = document.getElementById('payment-status-text');
+    const spinner = document.getElementById('payment-spinner');
+    const submitBtn = document.getElementById('alumni-submit-btn');
+
+    if (alumniForm && statusContainer) {
+      alumniForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const data = {
+          name: document.getElementById('a-name').value.trim(),
+          year: document.getElementById('a-year').value.trim(),
+          email: document.getElementById('a-email').value.trim(),
+          phone: document.getElementById('a-phone').value.trim(),
+          mpesaCode: document.getElementById('a-mpesa-code').value.trim().toUpperCase(),
+          city: document.getElementById('a-city').value.trim(),
+          occupation: document.getElementById('a-occupation').value.trim(),
+          message: document.getElementById('a-message').value.trim()
+        };
+
+        statusContainer.classList.remove('hidden');
+        spinner.classList.remove('hidden');
+        statusContainer.classList.remove('border-purple-300', 'bg-purple-50', 'border-amber-300', 'bg-amber-50');
+        statusContainer.classList.add('border-slate-200');
+        statusText.innerHTML = 'Submitting your registration...';
+        statusContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        if (notConfigured(cfg.SHEET_ENDPOINT_URL)) {
+          // Setup isn't finished yet — say so plainly instead of pretending it worked.
+          spinner.classList.add('hidden');
+          statusContainer.classList.remove('border-slate-200');
+          statusContainer.classList.add('border-amber-300', 'bg-amber-50');
+          statusText.innerHTML = `
+            <div class="text-amber-900 space-y-1">
+              <div class="font-bold">Registration isn't connected yet</div>
+              <p class="text-xs">This form hasn't been wired up to save registrations. Please email your details to
+                <a href="mailto:moigirlskamusinga@gmail.com" class="underline font-semibold">moigirlskamusinga@gmail.com</a> for now.</p>
+            </div>`;
+          return;
+        }
+
+        if (submitBtn) submitBtn.disabled = true;
+
+        try {
+          // no-cors: the browser sends the request but we can't read the response back.
+          // We only know a genuine network failure (offline, blocked) via the catch below.
+          await fetch(cfg.SHEET_ENDPOINT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(data)
+          });
+
+          spinner.classList.add('hidden');
+          statusContainer.classList.remove('border-slate-200');
+          statusContainer.classList.add('border-purple-300', 'bg-purple-50');
+          statusText.innerHTML = `
+            <div class="text-purple-900 space-y-2">
+              <div class="text-xl font-bold font-display text-purple-950 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-circle-check text-brand-purple text-2xl"></i> Registration Received
+              </div>
+              <p>Thank you, <strong>${data.name}</strong>! Your details have been recorded. A staff member will verify your
+                M-Pesa payment against code <strong>${data.mpesaCode}</strong> and activate your listing shortly.</p>
+            </div>`;
+          alumniForm.reset();
+        } catch (err) {
+          spinner.classList.add('hidden');
+          statusContainer.classList.remove('border-slate-200');
+          statusContainer.classList.add('border-amber-300', 'bg-amber-50');
+          statusText.innerHTML = `
+            <div class="text-amber-900 space-y-1">
+              <div class="font-bold">Couldn't submit — please check your connection</div>
+              <p class="text-xs">If this keeps happening, email your details to
+                <a href="mailto:moigirlskamusinga@gmail.com" class="underline font-semibold">moigirlskamusinga@gmail.com</a> instead.</p>
+            </div>`;
+        } finally {
+          if (submitBtn) submitBtn.disabled = false;
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

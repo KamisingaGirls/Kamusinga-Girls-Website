@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignments - ACK Moi Girls High School Kamusinga</title>
+<meta name="description" content="Current homework, projects and exam notices for ACK Moi Girls High School Kamusinga students.">
+<meta name="keywords" content="ACK Moi Girls Kamusinga assignments, Kamusinga student portal, girls schools in western Kenya, girls schools in Bungoma county">
+
+<link rel="canonical" href="https://www.moigirlskamusinga.net/assignments.html">
+
+<!-- Social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ACK Moi Girls High School Kamusinga">
+<meta property="og:title" content="Assignments — ACK Moi Girls High School Kamusinga">
+<meta property="og:description" content="Current homework, projects and exam notices for ACK Moi Girls High School Kamusinga students.">
+<meta property="og:image" content="https://www.moigirlskamusinga.net/images/photos/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A1538">
+<link rel="icon" href="images/crest.svg" type="image/svg+xml">
+
+<!-- Fonts & icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+
+<!-- Tailwind: precompiled static stylesheet (colours & fonts still set in assets/site-config.js,
+     which is now only a reference doc + the source the build reads from) -->
+<link rel="stylesheet" href="assets/tailwind.css">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+
+</head>
+<body class="antialiased text-slate-800 flex flex-col min-h-screen">
+
+<!-- Top Utility Bar -->
+<div class="bg-brand-navyDark text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800/80">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+    <div class="flex items-center space-x-6">
+      <a href="mailto:moigirlskamusinga@gmail.com" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-regular fa-envelope text-brand-purple"></i>moigirlskamusinga@gmail.com</a>
+      <a href="tel:+254737373679" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-phone text-brand-purple"></i>0737 373 679</a>
+    </div>
+    <div class="flex items-center gap-2 text-slate-300"><i class="fa-solid fa-location-dot text-brand-purple"></i><span>PO Box 282–50204, Kimilili, Bungoma County, Kenya</span></div>
+  </div>
+</div>
+
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <img src="images/crest.svg" alt="ACK Moi Girls High School Kamusinga crest" width="48" height="48" class="w-12 h-12 object-contain">
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg md:text-xl text-brand-navyDark tracking-tight group-hover:text-brand-blue transition-colors">ACK Moi Girls Kamusinga</span>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-brand-purple">C1 3 Pathway Boarding School</span>
+        </div>
+      </a>
+      <nav class="hidden lg:flex items-center space-x-1" aria-label="Primary Navigation">
+        <a href="index.html" class="px-4 py-2 rounded-full text-sm font-semibold text-slate-700 hover:text-brand-blue hover:bg-slate-50 transition-colors">Home</a><a href="academics.html" class="px-4 py-2 rounded-full text-sm font-semibold text-slate-700 hover:text-brand-blue hover:bg-slate-50 transition-colors">Academics</a><a href="alumni.html" class="px-4 py-2 rounded-full text-sm font-semibold text-slate-700 hover:text-brand-purple hover:bg-slate-50 transition-colors">Alumni</a><a href="assignments.html" aria-current="page" class="px-4 py-2 rounded-full text-sm font-semibold text-brand-blue bg-blue-50">Assignments</a><a href="calendar.html" class="px-4 py-2 rounded-full text-sm font-semibold text-slate-700 hover:text-brand-blue hover:bg-slate-50 transition-colors">Calendar</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <a href="alumni.html#register" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-brand-purple hover:bg-brand-purpleHover transition-all shadow-md shadow-purple-500/25">
+          <i class="fa-solid fa-users-line mr-2 text-xs"></i>Join Alumni Network
+        </a>
+        <button id="nav-toggle" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i id="nav-icon" class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 shadow-xl">
+    <a href="index.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Home</a><a href="academics.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Academics</a><a href="alumni.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Alumni</a><a href="assignments.html" aria-current="page" class="block px-4 py-3 rounded-xl text-base font-semibold text-brand-blue bg-blue-50">Assignments</a><a href="calendar.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Calendar</a>
+    <div class="pt-2"><a href="alumni.html#register" class="block w-full text-center py-3 rounded-full font-bold text-white bg-brand-purple hover:bg-brand-purpleHover shadow">Join Alumni Network</a></div>
+  </div>
+</header>
+
+<main class="flex-grow">
+
+  <section class="relative bg-brand-lightBg border-b border-slate-200/80 overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-[26rem] h-[26rem] rounded-full bg-purple-300/25 blur-3xl" aria-hidden="true"></div>
+    <div class="absolute -bottom-32 -left-24 w-[22rem] h-[22rem] rounded-full bg-blue-300/20 blur-3xl" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <nav class="flex items-center text-xs font-semibold uppercase tracking-wider text-slate-500 gap-2" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-brand-purple transition-colors">Home</a>
+            <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+            <span class="text-brand-purple font-bold">Assignments</span>
+          </nav>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-purple text-xs font-bold tracking-wider uppercase"><i class="fa-solid fa-book-open-reader"></i> Assignments Portal</div>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-navyDark leading-[1.12]">Homework, projects &amp; <span class="text-brand-purple">exam notices.</span></h1>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">Everything students need to hand in or prepare for, kept in one place so nothing gets lost.</p>
+          
+        </div>
+        <div class="lg:col-span-5">
+          <div class="photo rounded-3xl shadow-corporate bg-white group">
+            <img src="images/photos/assign.jpg" alt="Students studying together" width="1600" height="1200" loading="eager" decoding="async" fetchpriority="high" class="w-full h-[380px] lg:h-[440px] object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark/75 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <span class="text-[11px] font-bold uppercase tracking-wider bg-white/15 backdrop-blur-md px-3 py-1 rounded-full">Stay on track</span>
+              <p class="text-sm font-semibold mt-2">Homework, projects and notices in one place.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col sm:flex-row gap-4 mb-8 bg-brand-sky rounded-2xl p-5">
+        <div class="flex-1">
+          <label for="filter-form" class="block text-[11px] font-bold uppercase tracking-wider text-brand-purple mb-1.5">Class / Form</label>
+          <select id="filter-form" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-purple/40 focus:border-brand-purple">
+            <option value="all">All Classes</option>
+            <!-- <option value="Form 1">Form 1</option>
+            <option value="Form 2">Form 2</option> -->
+            <option value="Form 3">Form 3</option>
+            <option value="Form 4">Form 4</option>
+            <option value="Grade 10">Grade 10</option>
+            <option value="Grade 11">Grade 11</option>
+            <option value="Grade 12">Grade 12</option>
+          </select>
+        </div>
+        <div class="flex-1">
+          <label for="filter-subject" class="block text-[11px] font-bold uppercase tracking-wider text-brand-purple mb-1.5">Subject</label>
+          <select id="filter-subject" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-purple/40 focus:border-brand-purple">
+            <option value="all">All Subjects</option>
+            <option value="English">English</option>
+            <option value="Literature in English">Literature in English</option>
+            <option value="French">French</option>
+            <option value="Kiswahili">Kiswahili</option>
+            <option value="Fasihi ya Kiswahili">Fasihi ya Kiswahili</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Biology">Biology</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Physics">Physics</option>
+            <option value="History">History</option>
+            <option value="Geography">Geography</option>
+            <option value="CRE">CRE</option>
+            <option value="Business Studies">Business Studies</option>
+            <option value="Computer Studies">Computer Studies</option>
+            <option value="Agriculture">Agriculture</option>
+            <option value="Home Science">Home Science</option>
+            <option value="Music & Dance">Music & Dance</option>
+            <option value="Theatre & Film">Theatre & Film</option>
+          </select>
+        </div>
+      </div>
+
+      <ul id="assignments-list" class="space-y-4">
+        <li class="py-14 text-center text-slate-500"><i class="fa-solid fa-spinner fa-spin text-2xl text-brand-purple mb-3 block"></i>Loading assignments…</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contact-info" class="bg-brand-navyDark text-slate-300 text-sm border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+      <div class="lg:col-span-2 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-white p-1 flex items-center justify-center"><img src="images/crest.svg" alt="" width="36" height="36" class="max-h-full max-w-full"></div>
+          <span class="font-display font-bold text-lg text-white">Moi Girls Kamusinga</span>
+        </div>
+        <p class="text-slate-400 text-xs leading-relaxed max-w-sm">A national ACK girls' boarding school in Kimilili, Bungoma County, educating confident, capable young women since 1973. Motto: <em>Self Drive for Excellence</em>.</p>
+      </div>
+      <div>
+        <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Explore</h5>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="academics.html" class="hover:text-white transition-colors">Academics</a></li>
+          <li><a href="alumni.html" class="hover:text-white transition-colors">Alumni Network</a></li>
+          <li><a href="assignments.html" class="hover:text-white transition-colors">Assignments Portal</a></li>
+          <li><a href="calendar.html" class="hover:text-white transition-colors">School Calendar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Departments</h5>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="academics.html#sciences" class="hover:text-white transition-colors">Mathematics &amp; Sciences</a></li>
+          <li><a href="academics.html#humanities" class="hover:text-white transition-colors">Humanities &amp; Languages</a></li>
+          <li><a href="academics.html#technical" class="hover:text-white transition-colors">Technical Subjects</a></li>
+          <li><a href="academics.html#careers" class="hover:text-white transition-colors">Guidance &amp; Counseling</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Get in touch</h5>
+        <div class="space-y-2.5 text-xs text-slate-400">
+          <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-brand-purple mt-0.5"></i><span>PO Box 282–50204, Kimilili<br>2km off Chwele–Kimilili–Bungoma Rd</span></p>
+          <p class="flex items-center gap-2"><i class="fa-regular fa-envelope text-brand-purple"></i><a href="mailto:moigirlskamusinga@gmail.com" class="hover:text-white transition-colors">moigirlskamusinga@gmail.com</a></p>
+          <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-purple"></i><a href="tel:+254737373679" class="hover:text-white transition-colors">0737 373 679</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3">
+      <div class="flex items-center gap-4">
+        <span>© <span class="js-year">2026</span> ACK Moi Girls High School Kamusinga. All rights reserved.</span>
+        <a href="admin/index.html" class="text-brand-purple/80 hover:text-brand-purple font-semibold transition-colors flex items-center gap-1.5"><i class="fa-solid fa-key text-[10px]"></i>Staff Portal Login</a>
+      </div>
+      <div class="text-slate-400 font-medium">Designed and developed by Shalleen H for Moi Girls Kamusinga</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/portal.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  Portal.assignments({
+    src: 'assets/data/assignments.json',
+    list: '#assignments-list',
+    formFilter: '#filter-form',
+    subjectFilter: '#filter-subject'
+  });
+});
+</script>
+</body>
+</html>

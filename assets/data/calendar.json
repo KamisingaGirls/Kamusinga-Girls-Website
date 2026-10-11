@@ -1,0 +1,53 @@
+{
+  "events": [
+    {
+      "title": "Term 3 opening day",
+      "date": "2026-09-29",
+      "category": "Academic",
+      "time": "By 5:00 PM",
+      "body": "All students report to school by 5:00pm."
+    },
+    {
+      "title": "Inter-house sports day",
+      "date": "2026-10-16",
+      "category": "Sports",
+      "time": "9:00 AM — 4:00 PM",
+      "body": "Held on the school grounds. Parents welcome from 9:00am."
+    },
+    {
+      "title": "Mid-term examinations begin",
+      "date": "2026-10-27",
+      "category": "Academic",
+      "time": "All day",
+      "body": "Runs for one week across all forms."
+    },
+    {
+      "title": "Parents' Day — Form 2 & Form 3",
+      "date": "2026-11-05",
+      "category": "Welfare",
+      "time": "8:00 AM — 1:00 PM",
+      "body": "Parents and guardians meet subject teachers to review progress."
+    },
+    {
+      "title": "Alumni Homecoming Day",
+      "date": "2026-11-13",
+      "category": "Event",
+      "time": "10:00 AM — 3:00 PM",
+      "body": "Old girls return to campus — organised with the alumni association."
+    },
+    {
+      "title": "Prize-giving day",
+      "date": "2026-12-04",
+      "category": "Event",
+      "time": "9:00 AM",
+      "body": "Recognising top academic and co-curricular achievers this term."
+    },
+    {
+      "title": "Term 3 closing day",
+      "date": "2026-12-11",
+      "category": "Holiday",
+      "time": "By 12:00 PM",
+      "body": "School closes for the December holidays."
+    }
+  ]
+}

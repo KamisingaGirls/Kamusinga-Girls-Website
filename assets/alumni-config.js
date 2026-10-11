@@ -1,0 +1,21 @@
+/* ===================================================================
+   ALUMNI REGISTRATION — settings a staff member can edit without
+   touching any other file. Save this file after editing and re-upload
+   it; nothing else needs to change.
+   =================================================================== */
+
+window.ALUMNI_CONFIG = {
+
+  // Where to pay the Ksh 200 registration fee, shown on the Alumni page.
+  // Use the school fees Paybill, or a staff member's M-Pesa Till/number,
+  // until the dedicated Alumni Paybill is ready — then just update these
+  // two lines and nothing else changes.
+  PAYBILL_NUMBER: "PASTE YOUR PAYBILL OR TILL NUMBER HERE",
+  ACCOUNT_REFERENCE: "ALUMNI-200",     // what the payer should type as the Account/Reference
+
+  // Where registrations are saved. This is the "Web app URL" you get after
+  // deploying the Google Apps Script described in GOOGLE_SHEETS_SETUP.txt.
+  // Registration will not work until this is filled in.
+  SHEET_ENDPOINT_URL: "PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE"
+
+};
