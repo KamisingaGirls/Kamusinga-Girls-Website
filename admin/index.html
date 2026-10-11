@@ -12,11 +12,8 @@
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
   <script>
-    // 1. Point the Identity Widget to your Netlify site URL
-    // const NETLIFY_SITE_URL = "https://kamusingagirls.netlify.app/";
-
     if (window.netlifyIdentity) {
-      // Set external Netlify Identity endpoint
+      // Set the Identity endpoint directly as a normal text string
       window.netlifyIdentity.setSettings({
         APIUrl: "https://kamusingagirls.netlify.app/.netlify/identity"
       });
@@ -29,7 +26,7 @@
         }
       });
 
-      // Automatically open the modal if landing via an email invite/recovery token
+      // Catch password setup tokens from email invites
       if (window.location.hash.includes('invite') || window.location.hash.includes('recovery')) {
         window.netlifyIdentity.on('init', () => {
           window.netlifyIdentity.open('signup');
@@ -39,7 +36,6 @@
   </script>
 </body>
 </html>
-
 
 
 
