@@ -18,6 +18,30 @@ document.documentElement.classList.add('js-reveal');
   }, true);
 })();
 
+/* Fade a framed photo in only once it has actually finished loading,
+   instead of an abrupt pop from the placeholder background — see
+   ".photo img" in site.css. Covers images already cached (instant),
+   images still downloading (fades in on load), and — as a safety net —
+   images that fail every format the fallback above tries. */
+(function () {
+  function markLoaded(img) { img.classList.add('loaded'); }
+  document.addEventListener('load', function (e) {
+    var img = e.target;
+    if (img && img.tagName === 'IMG' && img.closest('.photo')) markLoaded(img);
+  }, true);
+  document.addEventListener('error', function (e) {
+    var img = e.target;
+    if (!img || img.tagName !== 'IMG' || !img.closest('.photo')) return;
+    var tried = (img.getAttribute('data-tried') || '').split(',').filter(Boolean);
+    if (tried.length >= 4) markLoaded(img); // every format tried — stop waiting
+  }, true);
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.photo img').forEach(function (img) {
+      if (img.complete && img.naturalWidth > 0) markLoaded(img);
+    });
+  });
+})();
+
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.js-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 

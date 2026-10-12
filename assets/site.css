@@ -30,6 +30,11 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .photo { position: relative; overflow: hidden; background: #E2E8F0; }
 .photo img { width: 100%; height: 100%; object-fit: cover; }
 
+/* Fade a photo in once it has actually finished loading, instead of an
+   abrupt pop from the placeholder background straight to the image. */
+.photo img { opacity: 0; transition: opacity .35s ease; }
+.photo img.loaded { opacity: 1; }
+
 /* Hero slider */
 .hero-slide.active { animation: slideIn .7s ease both; }
 @keyframes slideIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
@@ -42,5 +47,5 @@ h1, h2, h3, h4 { text-wrap: balance; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-slide.active, .js-reveal .reveal { animation: none; transition: none; opacity: 1; transform: none; }
+  .hero-slide.active, .js-reveal .reveal, .photo img { animation: none; transition: none; opacity: 1; transform: none; }
 }
