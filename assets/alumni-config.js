@@ -16,6 +16,6 @@ window.ALUMNI_CONFIG = {
   // Where registrations are saved. This is the "Web app URL" you get after
   // deploying the Google Apps Script described in GOOGLE_SHEETS_SETUP.txt.
   // Registration will not work until this is filled in.
-  SHEET_ENDPOINT_URL: "PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE"
+  SHEET_ENDPOINT_URL: "https://script.google.com/macros/s/AKfycbzSqDCVY4KrDE7MSuTL2oxv-GVO-8Qu95hU2mXN5d1A02NJcpRcrtpOYqWcX7wOhb2u/exec"
 
 };
