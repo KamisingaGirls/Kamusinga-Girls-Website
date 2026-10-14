@@ -10,8 +10,8 @@ window.ALUMNI_CONFIG = {
   // Use the school fees Paybill, or a staff member's M-Pesa Till/number,
   // until the dedicated Alumni Paybill is ready — then just update these
   // two lines and nothing else changes.
-  PAYBILL_NUMBER: "PASTE YOUR PAYBILL OR TILL NUMBER HERE",
-  ACCOUNT_REFERENCE: "ALUMNI-200",     // what the payer should type as the Account/Reference
+  M_PESA_NUMBER: "0726 103 633",
+  NAME_OF_RECIPIENT: "EMILY JUMA",     // what the payer should type as the Account/Reference
 
   // Where registrations are saved. This is the "Web app URL" you get after
   // deploying the Google Apps Script described in GOOGLE_SHEETS_SETUP.txt.
