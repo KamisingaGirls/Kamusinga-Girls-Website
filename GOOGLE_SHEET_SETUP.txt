@@ -1,0 +1,111 @@
+HOW TO RUN ASSIGNMENTS & THE CALENDAR FROM A GOOGLE SHEET
+=========================================================
+
+Teachers edit a Google Sheet. The website's Assignments and Calendar pages
+read it automatically. Nobody needs GitHub or access to the website code.
+
+Until the two links in Step 5 are pasted in, the site keeps using the old
+JSON files, so nothing breaks while you set this up.
+
+
+STEP 1 - Make the account that will own the sheet
+-------------------------------------------------
+Use the school's own Google account, or a dedicated "website" account
+(not a teacher's personal one). Turn on 2-Step Verification for it.
+
+
+STEP 2 - Upload the template as a Google Sheet
+----------------------------------------------
+1. Sign in to that account and open drive.google.com.
+2. New > File upload > choose moi-girls-portal-template.xlsx.
+3. Double-click the uploaded file to open it, then File > Save as Google Sheets.
+4. You now have two tabs: Assignments and Calendar.
+   Don't rename the tabs or the column headings.
+5. Check that the dropdowns work (click a Form, Subject or Category cell).
+   If one is missing, add it yourself (about a minute each):
+   a. Select the whole column below the heading, e.g. click C2, then
+      Ctrl+Shift+Down arrow.
+   b. Data > Data validation > Add rule.
+   c. Criteria: "Dropdown" and type each option as its own item:
+        Form:      Grade 10, Grade 11, Grade 12, Form 3, Form 4
+        Category:  Academic, Sports, Event, Welfare, Holiday
+        Subject:   English, Literature in English, French, Kiswahili,
+                   Fasihi ya Kiswahili, Mathematics, Biology, Chemistry,
+                   Physics, History, Geography, CRE, Business Studies,
+                   Computer Studies, Agriculture, Home Science,
+                   Music & Dance, Theatre & Film
+   d. Under "Advanced options" choose "Reject the input", then Done.
+
+
+STEP 3 - Fill it in the right way
+---------------------------------
+Assignments tab: Title | Date | Form | Subject | File
+Calendar tab:    Date | Title | Category | Start time | End time | Details
+
+- Date: type it as 2026-10-30 (year-month-day). The columns are set to
+  plain text so Sheets does not change it.
+- Start time / End time: type 09:00 AM or 2:30 PM. Leave BOTH blank for an
+  all-day event. Start only (no end) is fine too.
+- One row per assignment or event. Delete a row to remove it.
+- Don't leave a Title blank: rows without a title or a date are skipped.
+
+
+STEP 4 - Assignment files (Drive folder)
+----------------------------------------
+1. In the same account, make a Drive folder called "Assignments".
+2. Right-click the folder > Share > General access > "Anyone with the link"
+   > Viewer. (Files inside inherit this.)
+3. A teacher uploads a PDF into that folder, right-clicks it > Share >
+   Copy link, and pastes the link into the File column of that row.
+4. The website turns the link into a Download button. Leave the File cell
+   empty and the page shows "No file yet".
+Do NOT use Sheets "smart chips" for the file - paste a plain link.
+Never share your whole Drive, only this folder and the sheet.
+
+
+STEP 5 - Publish the two tabs and connect the website
+-----------------------------------------------------
+1. In the sheet: File > Share > Publish to web.
+2. Under "Link", choose the tab "Assignments" (not "Entire document"),
+   change "Web page" to "Comma-separated values (.csv)", click Publish, OK.
+3. Copy the link. It looks like:
+   https://docs.google.com/spreadsheets/d/e/2PACX-.../pub?gid=0&single=true&output=csv
+4. Repeat for the "Calendar" tab and copy that second link.
+   (Leave "Automatically republish when changes are made" ticked.)
+5. Open assets/portal.js and find the block near the top:
+
+     var SHEETS = {
+       assignments: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQgwFBJzyXgkJfKLp9-lqo489i3JoNsXkvthMDwZCDEB9qQtHr7-MKPGwp3fUOlnb6SvBvW2n0RNriW/pub?gid=1334790184&single=true&output=csv',
+       calendar:    'https://docs.google.com/spreadsheets/d/e/2PACX-1vQgwFBJzyXgkJfKLp9-lqo489i3JoNsXkvthMDwZCDEB9qQtHr7-MKPGwp3fUOlnb6SvBvW2n0RNriW/pub?gid=1115658666&single=true&output=csv'
+     };
+
+   Paste each link between its quote marks, then save.
+6. Pull from GitHub first (git pull), then commit and push as usual.
+   After deploying, hard-refresh the pages (Ctrl+Shift+R).
+
+
+STEP 6 - Let the teachers edit
+------------------------------
+In the sheet: Share > add each teacher's Google email > Editor.
+(Editors can change the sheet but cannot see anything else in the account.)
+Protect the header row: select row 1 > right-click > Protect range > restrict
+to yourself, on both tabs.
+
+
+GOOD TO KNOW
+------------
+- Changes can take a few minutes to show on the website (Google caches
+  published sheets).
+- Anything in a published tab is public. Never put private information
+  (marks, student details) in these tabs.
+- If a teacher deletes something by mistake: File > Version history > See
+  version history, and restore.
+- Make a backup now and then: File > Download > Microsoft Excel (.xlsx).
+- If Google can't be reached, the website falls back to the JSON files in
+  assets/data/, so the pages never go blank. Once you are happy with the
+  sheet, those files only matter as that safety net, so leave them in
+  place (and leave the dummy assignments there if you want them kept for
+  search indexing; they'll show whenever the fallback is used).
+- The old CMS (/admin) no longer controls these pages once the links are
+  pasted in. Change the "Staff Portal Login" footer link to the sheet's
+  address if you want teachers to have a handy way in.
