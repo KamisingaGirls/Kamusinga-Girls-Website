@@ -39,6 +39,14 @@
       "department": "Technical Subjects",
       "subject": "Business Studies",
       "assignment_file": ""
+    },
+    {
+      "title": "December Holiday ",
+      "date": "2026-09-27",
+      "form": "Form 3",
+      "department": "Mathematics",
+      "subject": "Mathematics",
+      "assignment_file": "assets/uploads/mat-30.doc"
     }
   ]
 }
