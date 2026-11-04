@@ -1,0 +1,143 @@
+SEO FIXES FOR moigirlskamusinga.net
+============================================================
+
+Why: Google mostly decides what a page is about from its <title> line, then the
+page headings and text. The Cardinal Otunga site puts the exact phrases people
+search for (for example "Best Girls' School in Bungoma County") into its titles,
+descriptions and page text. The Moi Girls titles did not contain those phrases.
+
+HOW TO APPLY (about 15 minutes)
+- In VS Code open each page. Press Ctrl+F, paste the FIND text, and select
+  the whole line (or the sentence) it finds.
+- Replace it with the NEW text underneath. Nothing else on the page changes.
+- admissions.html: replace the whole file with the new one that came with this note.
+- Then pull, commit and push as usual. Check each page's title in the browser tab.
+
+
+------------------------------------------------------------
+FILE: index.html
+------------------------------------------------------------
+
+FIND:
+  <title>ACK Moi Girls High School Kamusinga - Self Drive for Excellence</title>
+REPLACE WITH:
+  <title>ACK Moi Girls Kamusinga | One of the Best Girls' Schools in Bungoma County</title>
+
+FIND the whole line that starts with:
+  <meta name="description" content="ACK Moi Girls High School Kamusinga is a premier
+REPLACE the whole line with:
+  <meta name="description" content="One of the best girls' schools in Bungoma County and western Kenya: ACK Moi Girls High School Kamusinga offers STEM, Social Sciences and Arts &amp; Sports Science pathways.">
+
+------------------------------------------------------------
+FILE: academics.html
+------------------------------------------------------------
+
+FIND:
+  <title>Academics &amp; Pathways - ACK Moi Girls High School Kamusinga</title>
+REPLACE WITH:
+  <title>STEM &amp; CBC Pathways for Girls in Bungoma County | ACK Moi Girls Kamusinga</title>
+
+FIND the whole line that starts with:
+  <meta name="description" content="Explore academic departments
+REPLACE the whole line with:
+  <meta name="description" content="STEM, Social Sciences and Arts &amp; Sports Science pathways at ACK Moi Girls High School Kamusinga, a well-equipped girls' school in Bungoma County and western Kenya, with science laboratories and co-curricular programmes.">
+
+------------------------------------------------------------
+FILE: alumni.html
+------------------------------------------------------------
+
+FIND:
+  <title>Alumni Network - ACK Moi Girls High School Kamusinga</title>
+REPLACE WITH:
+  <title>Alumni Network | ACK Moi Girls High School Kamusinga, Bungoma County</title>
+
+------------------------------------------------------------
+FILE: assignments.html
+------------------------------------------------------------
+
+FIND:
+  <title>Assignments - ACK Moi Girls High School Kamusinga</title>
+REPLACE WITH:
+  <title>Student Assignments | ACK Moi Girls High School Kamusinga, Bungoma County</title>
+
+FIND the whole line that starts with:
+  <meta name="description" content="Current homework
+REPLACE the whole line with:
+  <meta name="description" content="Homework, projects and exam notices for students of ACK Moi Girls High School Kamusinga, a girls' school in Bungoma County, western Kenya.">
+
+------------------------------------------------------------
+FILE: calendar.html
+------------------------------------------------------------
+
+FIND:
+  <title>School Calendar - ACK Moi Girls High School Kamusinga</title>
+REPLACE WITH:
+  <title>School Calendar &amp; Term Dates | ACK Moi Girls High School Kamusinga, Bungoma County</title>
+
+FIND the whole line that starts with:
+  <meta name="description" content="Term dates
+REPLACE the whole line with:
+  <meta name="description" content="Term dates, exams, sports days and events at ACK Moi Girls High School Kamusinga, Bungoma County, western Kenya.">
+
+------------------------------------------------------------
+FILE: admissions.html
+------------------------------------------------------------
+
+------------------------------------------------------------
+FILE: index.html
+------------------------------------------------------------
+
+FIND:
+  ACK Moi Girls High School Kamusinga empowers young women across Kenya with holistic Christian education
+REPLACE WITH:
+  ACK Moi Girls High School Kamusinga, one of the best girls' schools in Bungoma County and western Kenya, empowers young women with holistic Christian education
+
+FIND:
+  recognised as one of the leading girls' boarding schools in Bungoma County
+REPLACE WITH:
+  recognised as one of the best girls' boarding schools in Bungoma County
+
+FIND:
+  "foundingDate":"1973",
+REPLACE WITH:
+  "foundingDate":"1973","slogan":"Self Drive for Excellence","knowsAbout":["STEM education","CBC senior school pathways","Girls' boarding school education"],
+
+------------------------------------------------------------
+FILE: academics.html
+------------------------------------------------------------
+
+FIND:
+  At the Senior School level, students choose specialised academic pathways that align directly with their individual strengths and future career ambitions.
+REPLACE WITH:
+  At the Senior School level, students choose specialised academic pathways that align directly with their individual strengths and future career ambitions. ACK Moi Girls offers the STEM pathway, with well-equipped science laboratories, to girls in Bungoma County and across western Kenya.
+
+
+NEED TO CHECK BEFORE ANYTHING ELSE (you are the only one who can)
+-----------------------------------------------------------------
+1. Open https://www.moigirlskamusinga.net/academics.html in a browser.
+   - If the address bar changes to .../academics (no .html), your hosting is
+     removing ".html". Then every page's canonical line should NOT end in .html.
+     Example: change  https://www.moigirlskamusinga.net/academics.html
+              to      https://www.moigirlskamusinga.net/academics
+     and on the home page use  https://www.moigirlskamusinga.net/
+     (a canonical that points to a different address than the page is served
+     at sends Google mixed signals).
+   - If it stays .html, leave the canonical lines as they are.
+2. Open https://moigirlskamusinga.net (without www). It should jump to the www
+   address, because the canonical lines all say www. If www jumps to the
+   non-www address instead, tell me and we will change the canonicals.
+3. Google Search Console > Performance. It lists the searches the school
+   actually appears for, with impressions. If it shows 0 impressions, the
+   pages are not being shown at all yet; if it shows impressions but low
+   positions, the changes above plus links from other sites are what move it.
+4. Ask the school to link to the website from the ACK diocese page, the Facebook
+   page, any school directory and the Google Business Profile.
+
+HONEST NOTE
+-----------
+Titles and page text are the part we can fix on the website itself, and they
+are the visible difference from the Otunga site. Rankings also depend on how
+many reputable sites link to the page and how long the site has existed, which
+we cannot see for Otunga. Expect changes to show over days to weeks after
+Google crawls the pages again, not instantly. After pushing, open Search
+Console > URL inspection > Request indexing for the home and academics pages.
