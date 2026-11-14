@@ -14,7 +14,7 @@
       "form": "Form 4",
       "department": "Mathematics",
       "subject": "Mathematics",
-      "assignment_file": "assets/uploads/financial-econometrics-assignment-1.pdf"
+      "assignment_file": ""
     },
     {
       "title": "Titration lab report",
@@ -39,6 +39,14 @@
       "department": "Technical Subjects",
       "subject": "Business Studies",
       "assignment_file": ""
+    },
+    {
+      "title": "Financial Econometrics",
+      "date": "2026-11-14",
+      "department": "Mathematics",
+      "form": "Grade 12",
+      "subject": "Mathematics",
+      "assignment_file": "assets/uploads/financial-econometrics-assignment-1.pdf"
     }
   ]
 }
